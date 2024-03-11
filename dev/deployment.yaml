@@ -18,4 +18,4 @@ spec:
       - name: smriti-docker
         image: smriti06/smriti_docker
         ports:
-        - containerPort: 8006
+        - containerPort: 9090
