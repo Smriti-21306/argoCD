@@ -1,0 +1,4 @@
+deploymentName : docker-deployment-dev
+serviceName : docker-service-dev
+portNumber : 30004
+namespace : dev

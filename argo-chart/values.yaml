@@ -1,0 +1,6 @@
+appName : demo
+deploymentName : docker-deployment
+serviceName : docker-service
+portNumber : 30003
+imageName : smriti06/smriti_docker
+namespace : default
