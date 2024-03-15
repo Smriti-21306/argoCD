@@ -8,7 +8,11 @@ spec:
   source:
     repoURL: https://github.com/Smriti-21306/argoCD.git
     targetRevision: HEAD
-    path: dev
+    path: argo-chart
+    helm:
+      valueFiles:
+        - values.yaml
+        - values-dev.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: myapp
