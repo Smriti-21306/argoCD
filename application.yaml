@@ -15,9 +15,7 @@ spec:
         - values-dev.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespaces:
-      - default
-      - dev
+    namespaces: default
 
   syncPolicy:
     syncOptions:
