@@ -6,16 +6,20 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/Smriti-21306/argoCD.git
+    repoURL: git@github.com:Smriti-21306/argocd-private.git //ssh url should be mentioned
+    sshPrivateKeySecret:
+      name: github-ssh-key-secret
+      key: sshPrivateKey
     targetRevision: HEAD
-    path: argo-chart
-    helm:
-      valueFiles:
-        - values.yaml
-        - values-dev.yaml
+    path: dev
+    # path: argo-chart
+    # helm:
+    #   valueFiles:
+    #     - values.yaml
+    #     - values-dev.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespaces: default
+    namespace: default
 
   syncPolicy:
     syncOptions:
